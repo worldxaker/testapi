@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 using WebAPIApplication.Models;
-
+/*
 namespace WebAPIApplication.Controllers
 {
     //[Route("api/user/[controller]")]
@@ -44,4 +44,4 @@ namespace WebAPIApplication.Controllers
         }
         
     }
-}
+}*/

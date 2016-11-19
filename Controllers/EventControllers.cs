@@ -33,10 +33,10 @@ namespace WebAPIApplication.Controllers
 
             db.SaveChangesAsync();
         }
-        //Get api/schedule/event/{id}
+        //Get api/schedule/event
         [Route("api/schedule/event")]
         [HttpGet]
-        public IEnumerable<Event> Get(Event value)
+        public IEnumerable<Event> Get()
         {
             IEnumerable<Event> events = db.Event;
 
