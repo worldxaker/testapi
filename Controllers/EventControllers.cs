@@ -15,16 +15,25 @@ namespace WebAPIApplication.Controllers
         public EventControllers(AppDBContext context){
             db = context;
         }
-        //POST api/user/event
-        [Route("api/user/event")]
+        //POST api/caretaker/event
+        [Route("api/caretaker/event")]
         [HttpPost]
         public void Post(Event value)
         {
             db.Event.Add(value);
             db.SaveChangesAsync();
         }
-        //Delete api/user/event/{id}
-        [Route("api/user/event/{id}")]
+        //Put api/caretaker/event
+        [Route("api/caretaker/event")]
+        [HttpPut]
+        public Event Put(Event value){
+            db.Event.Update(value);
+            db.SaveChangesAsync();
+            return value;
+        }
+
+        //Delete api/caretaker/event/{id}
+        [Route("api/caretaker/event/{id}")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

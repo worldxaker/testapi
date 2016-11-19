@@ -33,7 +33,7 @@ namespace WebAPIApplication
             string connection = Configuration.GetConnectionString("DefaultConnection");
 
             services.AddDbContext<AppDBContext>(options =>
-            options.UseSqlServer(connection));
+            options.UseSqlite(connection));
 
             // Add framework services.
             services.AddMvc();

@@ -15,7 +15,7 @@ namespace WebAPIApplication.Controllers
         public GeoControllers(AppDBContext context){
             db = context;
         }
-        //POST api/user/geo
+        //POST api/word/geo
         [Route("api/user/geo")]
         [HttpPost]
         public void Post(Geo value)
@@ -23,18 +23,8 @@ namespace WebAPIApplication.Controllers
             db.Geo.Add(value);
             db.SaveChangesAsync();
         }
-        //Delete api/user/geo/{id}
-        [Route("api/user/geo/{id}")]
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-            Geo geo = db.Geo.Find(id);
-            db.Geo.Remove(geo);
-
-            db.SaveChangesAsync();
-        }
-        //Get api/schedule/geo
-        [Route("api/schedule/geo")]
+        //Get api/caretaker/wordgeo
+        [Route("api/caretaker/wordgeo")]
         [HttpGet]
         public IEnumerable<Geo> Get()
         {
