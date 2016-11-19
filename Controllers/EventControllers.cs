@@ -24,7 +24,7 @@ namespace WebAPIApplication.Controllers
             db.SaveChangesAsync();
         }
         //Delete api/user/event/{id}
-        [Route("api/user/event")]
+        [Route("api/user/event/{id}")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
